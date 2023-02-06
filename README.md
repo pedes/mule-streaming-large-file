@@ -6,6 +6,7 @@ This project aims to illustrate how to process large files that exceed the memor
 ## Getting Started
 
 1. Import this code as a Mule project to Anypoint Studio.
+![Mule Flow Implementation](images/flow-implementation.png)
 2. Configure the properties that define the location of the source & destination folders (src/main/resources/configuration.properties)
 3. Set the Mule App Run Arguments (JVM Arguments), as follows:
 ```
@@ -24,6 +25,17 @@ Use the data.csv file, 857MB of size, place it within the origin directory to be
 ## Run the Mule App
 Trigger the stream by sending a HTTP GET request to ```http://localhost:8081/stream```
 
+Compare the source and destination folders.
+
+![source folder](images/source.png)
+
+![destination folder](images/destination.png)
+
+Analyze the results, and memory consumption, for example Visual VM or any other JVM profiler could help you.
+![memory results](images/memory-consumption.png)
+
+
 ### Further Reading & References
+- https://docs.mulesoft.com/mule-runtime/4.4/streaming-about
+- Another streaming blog: https://medium.com/another-integration-blog/streaming-in-mule-ac573c8b5019
 - More on HTTP-based streaming: https://gist.github.com/CMCDragonkai/6bfade6431e9ffb7fe88
-- 
