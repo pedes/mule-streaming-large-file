@@ -23,6 +23,8 @@ Use the data.csv file, 857MB of size, place it within the origin directory to be
 
 
 ## Run the Mule App
+Import the source code as a mule project in the Anypoint Studio.
+Deploy the application locally at the Studio.
 Trigger the stream by sending a HTTP GET request to ```http://localhost:8081/stream```
 
 Compare the source and destination folders.
