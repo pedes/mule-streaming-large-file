@@ -39,6 +39,7 @@ Analyze the results, and memory consumption, for example Visual VM or any other 
 ### Results on a Macbook M2 Chip / 92GB RAM
 
 INFO  2023-10-17 23:11:11,859 [[MuleRuntime].uber.15:: Starts the stream
+
 INFO  2023-10-17 23:14:20,097 [[MuleRuntime].uber.15: : stream processed
 
 3 Min to process the 860MB file, transformed each streamed record and appended new key-value pair, produced a 1.5GB CSV file.
