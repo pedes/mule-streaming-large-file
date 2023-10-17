@@ -36,6 +36,22 @@ Compare the source and destination folders.
 Analyze the results, and memory consumption, for example Visual VM or any other JVM profiler could help you.
 ![memory results](images/memory-consumption.png)
 
+### Results on a Macbook M2 Chip / 92GB RAM
+
+INFO  2023-10-17 23:11:11,859 [[MuleRuntime].uber.15:: Starts the stream
+INFO  2023-10-17 23:14:20,097 [[MuleRuntime].uber.15: : stream processed
+
+3 Min to process the 860MB file, transformed each streamed record and appended new key-value pair, produced a 1.5GB CSV file.
+
+```
+%dw 2.0
+output application/csv
+---
+message.payload as Array<Object> map (
+	(item, index) -> item ++ "newAttribute" : "transformed Value"
+)
+```
+
 
 ### Further Reading & References
 - https://docs.mulesoft.com/mule-runtime/4.4/streaming-about
